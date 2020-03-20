@@ -16,10 +16,19 @@ var authRoutes = require("./routes/index");
 var campgroundRoutes = require("./routes/campground");
 var commentRoutes = require("./routes/comment");
 
-   
-//seedDB(); 
-mongoose.connect("mongodb://localhost/Yelp_Camp",{ useNewUrlParser: true });
 
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://lakshya:<password>@cluster0-gane2.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+//seedDB(); 
+mongoose.connect("mongodb+srv://lakshya:Lakshya@123@cluster0-gane2.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true });
+//mongodb+srv://lakshya:<password>@cluster0-gane2.mongodb.net/test?retryWrites=true&w=majority 
 
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
